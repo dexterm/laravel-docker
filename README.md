@@ -12,3 +12,8 @@ DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=secret
+
+#If you get an error session table does not exist
+docker-compose exec app php artisan session:table
+
+docker-compose exec app php artisan migrate
